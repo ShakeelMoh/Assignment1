@@ -48,7 +48,6 @@ public class PrintIt {
 
         }
         
-        System.out.println("Tree Filled");
 
     }
 
@@ -56,11 +55,12 @@ public class PrintIt {
         //Method to print directory to screen using inorder
         System.out.println("Binary Tree Telephone Directory");
         System.out.println("-------------------------------\n");
-        System.out.println("--------------------------------------------------------------------------------------------------------");
-        System.out.println("|Name\t\t\t\t  |Number\t\t\t    |Address");
-        System.out.println("--------------------------------------------------------------------------------------------------------");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------+");
+        System.out.println("|Name\t\t\t\t  |Number\t\t\t    |Address\t\t\t\t\t\t       |");
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------|");
 
         bt.inorder(bt.getRoot());
+        System.out.println("-------------------------------------------------------------------------------------------------------------------------------|");
 
     }
 

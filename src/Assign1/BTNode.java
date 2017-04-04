@@ -53,7 +53,7 @@ public class BTNode {
 
     public String getData() {
         
-        System.out.format("|%-30s   |%-30s   |%-30s", name, number, address);
+        System.out.format("|%-30s   |%-30s   |%-55s   |", name, number, address, "");
         return "";
         //String output = name + "\t\t" + number + "\t\t" + address;
         //return output;
