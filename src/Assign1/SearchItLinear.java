@@ -23,7 +23,7 @@ public class SearchItLinear {
     private static ArrayList<String> number;
 
     public static void main(String[] args) {
-        
+
         long start = System.currentTimeMillis();
 
         ReadData r = new ReadData();
@@ -34,13 +34,17 @@ public class SearchItLinear {
         number = r.getListNumber();
 
         try {
-            
+
             //Reads data from query file
-            Scanner sc = new Scanner(new File("/home/shakeel/NetBeansProjects/Assignment1/data/RandomNames/7000Names"));
+            Scanner sc = new Scanner(new File("/home/shakeel/NetBeansProjects/Assignment1/data/RandomNames/5Names"));
 
             String searchTerm;
             boolean flag;
 
+            System.out.println("Searching query file using linear algorithm...\n\nResults:\n");
+            System.out.println("+------------------------------------------------------------------------------------------------------------------------------+");
+            System.out.println("|Name\t\t\t\t  |Number\t\t\t    |Address\t\t\t\t\t\t       |");
+            System.out.println("+------------------------------------------------------------------------------------------------------------------------------+");
             while (sc.hasNext()) {
 
                 searchTerm = sc.nextLine();
@@ -51,10 +55,10 @@ public class SearchItLinear {
                     if (searchTerm.equals(names.get(i))) {
                         flag = true;
 
-                        String output = address.get(i) + " | " + number.get(i) + " | " + names.get(i);
+                        System.out.format("|%-30s   |%-30s   |%-55s   |\n", names.get(i), number.get(i), address.get(i), "");
+                        //String output = address.get(i) + " | " + number.get(i) + " | " + names.get(i);
 
-                        System.out.println(output);
-
+                        //System.out.println(output);
                     }
 
                 }
@@ -63,16 +67,17 @@ public class SearchItLinear {
                     System.out.println("Not found");
                 }
             }
- 
+
+            System.out.println("+------------------------------------------------------------------------------------------------------------------------------+");
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(SearchItLinear.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
         long end = System.currentTimeMillis();
         long totalTime = end - start;
-        
-        System.out.println("Time taken: " + totalTime + "ms");
+
+        System.out.println("\nTime taken: " + totalTime + "ms");
 
     }
 
