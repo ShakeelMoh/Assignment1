@@ -1,14 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Assign1;
-
-/**
- *
- * @author shakeel
- */
 
 //STORES 3 ITEMS OF DATA PER ENTRY
 public class Data {
@@ -24,9 +14,11 @@ public class Data {
 
     }
 
+    //Default constructor
     public Data() {
     }
 
+    //Getters and setters
     public String getName() {
         return name;
     }

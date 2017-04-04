@@ -1,27 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Assign1;
 
-/**
- *
- * @author shakeel
- */
 public class BTNode {
 
+    //Instance variables of a node
     BTNode left;
     BTNode right;
 
     String address;
     String name;
     String number;
-   
-
 
     public BTNode() {
-
 
     }
 
@@ -35,24 +24,23 @@ public class BTNode {
         address = d.getAddress();
 
     }
-    
-    
 
+    //Get children nodes
     public BTNode getLeft() {
 
         return left;
 
     }
 
-    /* Function to get right node */
     public BTNode getRight() {
 
         return right;
 
     }
 
+    //Returns a nodes data neatly formatted in a table format
     public String getData() {
-        
+
         System.out.format("|%-30s   |%-30s   |%-55s   |", name, number, address, "");
         return "";
         //String output = name + "\t\t" + number + "\t\t" + address;
@@ -60,6 +48,8 @@ public class BTNode {
 
     }
 
+    
+    //Getters and setters
     public void setAddress(String address) {
         this.address = address;
     }
@@ -83,8 +73,5 @@ public class BTNode {
     public String getNumber() {
         return number;
     }
-
- 
-    
 
 }

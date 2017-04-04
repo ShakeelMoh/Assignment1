@@ -18,17 +18,20 @@ import java.util.logging.Logger;
  */
 public class SearchItLinear {
 
+    //Define 3 local array lists which will contain the data
     private static ArrayList<String> address;
     private static ArrayList<String> names;
     private static ArrayList<String> number;
 
     public static void main(String[] args) {
 
+        //Time program execution
         long start = System.currentTimeMillis();
 
         ReadData r = new ReadData();
         r.read();
 
+        //Fill local arraylists with data
         address = r.getListAddress();
         names = r.getListName();
         number = r.getListNumber();
@@ -41,6 +44,7 @@ public class SearchItLinear {
             String searchTerm;
             boolean flag;
 
+            //Data printed in tabular format
             System.out.println("Searching query file using linear algorithm...\n\nResults:\n");
             System.out.println("+------------------------------------------------------------------------------------------------------------------------------+");
             System.out.println("|Name\t\t\t\t  |Number\t\t\t    |Address\t\t\t\t\t\t       |");
@@ -50,19 +54,19 @@ public class SearchItLinear {
                 searchTerm = sc.nextLine();
                 flag = false;
 
+                //Iterate through array list till name is found
                 for (int i = 0; i < names.size(); i++) {
 
                     if (searchTerm.equals(names.get(i))) {
                         flag = true;
 
                         System.out.format("|%-30s   |%-30s   |%-55s   |\n", names.get(i), number.get(i), address.get(i), "");
-                        //String output = address.get(i) + " | " + number.get(i) + " | " + names.get(i);
 
-                        //System.out.println(output);
                     }
 
                 }
 
+                //If no name is found for query
                 if (flag == false) {
                     System.out.println("Not found");
                 }
@@ -74,6 +78,7 @@ public class SearchItLinear {
             Logger.getLogger(SearchItLinear.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+        //Time program execution
         long end = System.currentTimeMillis();
         long totalTime = end - start;
 

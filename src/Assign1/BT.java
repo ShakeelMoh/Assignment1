@@ -1,36 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Assign1;
 
-/**
- *
- * @author shakeel
- */
 public class BT {
 
-    private BTNode root;
-    
+    //Specify the root of the tree as "root"
+    private static BTNode root;
 
+    //Create instance of binary tree node
     BTNode node = new BTNode();
 
-    /* Constructor */
+    //Default constructor
     public BT() {
 
         root = null;
 
     }
 
-    /* Function to check if tree is empty */
-    public boolean isEmpty() {
+    //Check if tree is empty
+    public static boolean isEmpty() {
 
         return root == null;
 
     }
 
-    /* Function to insert data recursively */
+    //Insert data into bst recursively
     public void insert(BTNode node, Data d) {
         BTNode newNode = new BTNode(d);
         if (root == null) {
@@ -59,10 +51,8 @@ public class BT {
     }
 
     //Search bst for specific name
-    
     public boolean find(BTNode r, String name) {
 
-        
         if (r.getName().equals(name)) {
             System.out.println(r.getData());
             return true;
