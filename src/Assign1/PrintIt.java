@@ -54,7 +54,11 @@ public class PrintIt {
 
     public void print() {
         //Method to print directory to screen using inorder
-        System.out.println("Binary Tree Telephone Directory\n");
+        System.out.println("Binary Tree Telephone Directory");
+        System.out.println("-------------------------------\n");
+        System.out.println("--------------------------------------------------------------------------------------------------------");
+        System.out.println("|Name\t\t\t\t  |Number\t\t\t    |Address");
+        System.out.println("--------------------------------------------------------------------------------------------------------");
 
         bt.inorder(bt.getRoot());
 
